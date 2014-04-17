@@ -1,10 +1,11 @@
 {
   "MD5": {
+    "name": "MD5",
     "predicates": {
       "length": 32,
       "isNumeric": true,
       "isAlphabetic": true,
-      "isAlphanumeric": true  
+      "isAlphaNumeric": true  
     },
     "info": "http://en.wikipedia.org/wiki/MD5"
   }
