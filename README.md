@@ -5,6 +5,10 @@ A node.js module that identifies cryptographic hash algorithms from resultant ci
 
 This is a port of a Python library to Node (https://code.google.com/p/hash-identifier/)
 
+##Installation
+
+`npm install hashologist`
+
 ##Basic usage
 
 	var Hashologist = require('hashologist');
