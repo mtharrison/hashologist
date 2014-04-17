@@ -1,7 +1,11 @@
 {
-	"MD5": {
-		"length": 32,
-		"numeric": true,
-		"alphabetic": true,
-	}
+  "MD5": {
+    "predicates": {
+      "length": 32,
+      "isNumeric": true,
+      "isAlphabetic": true,
+      "isAlphanumeric": true  
+    },
+    "info": "http://en.wikipedia.org/wiki/MD5"
+  }
 }
