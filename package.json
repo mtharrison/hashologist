@@ -1,0 +1,24 @@
+{
+  "name": "hashologist",
+  "version": "0.0.0",
+  "description": "A node.js module that identifies cryptographic hash algorithms from ciphertext.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mtharrison/hashologist.git"
+  },
+  "keywords": [
+    "crypto",
+    "hacking",
+    "hash"
+  ],
+  "author": "Matt Harrison <hi@matt-harrison.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtharrison/hashologist/issues"
+  },
+  "homepage": "https://github.com/mtharrison/hashologist"
+}
