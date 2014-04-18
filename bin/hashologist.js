@@ -56,5 +56,6 @@ process.stdin.on('data', function(data) {
 });
 process.stdin.on('end', function(){
     hashes = input.replace(/[\n, ]+/g, ',').split(',');
-    processHashes(hashes);
+    console.log(hashes);
+    processHashes(hashes.slice(0,-1));
 });
