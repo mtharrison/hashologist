@@ -1,4 +1,4 @@
-Hashologist (v0.0.4) 
+Hashologist (v0.0.5) 
 ===========
 [![Build Status](https://travis-ci.org/mtharrison/hashologist.svg?branch=master)](https://travis-ci.org/mtharrison/hashologist)
 
