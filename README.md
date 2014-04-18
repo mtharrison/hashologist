@@ -27,7 +27,7 @@ All algorithms are found in the `algos.json` file.
 
 ##Command line tool
 
-If you install this package with the -g flag, a script will be placed in your path called `hashologist` (also alaised to `hasho` to save those precious keystrokes).
+If you install this package with the -g flag, a script will be placed in your path called `hashologist` (also aliased to `hasho` to save those precious keystrokes).
 
 	$ hasho -h
 	
