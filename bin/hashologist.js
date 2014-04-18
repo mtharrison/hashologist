@@ -5,9 +5,11 @@
  */
 
 var program = require('commander'),
-    Hashologist = require('../index.js')
-    Table = require('cli-table')
-    package = require('../package.json');
+    Hashologist = require('../index.js'),
+    Table = require('cli-table'),
+    package = require('../package.json'),
+    input = "",
+    hashes = []
 
 program
     .version(package.version)
@@ -19,25 +21,40 @@ program
 
 var numArgs = program.args.length;
 
-if(numArgs < 1){
-    console.log("You must pass at least 1 hash as an argument");
-    process.exit(1);
+// Process args passed
+if(numArgs > 0){
+    hashes = program.args;
+    processHashes(hashes);
 }
 
-var table = new Table({
-    head: ['Hash', 'Possible algorithms'],
-    colWidths: [40, 30]
+function processHashes(hashes) {
+    var table = new Table({
+        head: ['Hash', 'Possible algorithms'],
+        colWidths: [40, 30]
+    });
+
+    for(var i = 0; i < hashes.length; i++){ 
+        var algos = new Hashologist(hashes[i]).solve();
+        table.push([
+            hashes[i], 
+            algos.length > 0 ?
+                algos.map(function(el){ return el.name }).join(',') :
+                '[ No matches found ]'
+    
+        ]);
+    }
+
+    console.log(table.toString());
+
+    process.exit(0);
+}
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(data) {
+    input += data;  
 });
-
-for(var i = 0; i < program.args.length; i++){ 
-    var algos = new Hashologist(program.args[i]).solve();
-    table.push([
-        program.args[i], 
-        algos.length > 0 ?
-            algos.map(function(el){ return el.name }).join(',') :
-            '[ No matches found ]'
-
-    ]);
-}
-
-console.log(table.toString());
+process.stdin.on('end', function(){
+    hashes = input.replace(/[\n, ]+/g, ',').split(',');
+    processHashes(hashes);
+});

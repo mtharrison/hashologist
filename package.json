@@ -1,6 +1,6 @@
 {
   "name": "hashologist",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A node.js module that identifies cryptographic hash algorithms from ciphertext.",
   "main": "index.js",
   "scripts": {
