@@ -1,9 +1,13 @@
-Hashologist (v0.0.0)
+Hashologist (v0.0.1)
 ===========
 
 A node.js module that identifies cryptographic hash algorithms from resultant ciphertext.
 
 This is a port of a Python library to Node (https://code.google.com/p/hash-identifier/)
+
+## Installation
+
+Run `npm install -g hashologist`
 
 ##Basic usage
 
@@ -13,18 +17,44 @@ This is a port of a Python library to Node (https://code.google.com/p/hash-ident
 	
 ##Supported Algorithms
 
-The following algorithms are supported:
+The following algorithms are supported so far (more to come):
 
 - MD5
 
 All algorithms are found in the `algos.json` file.
 
+##Command line tool
+
+If you install this package with the -g flag, a script will be placed in your path called `hashologist` (also alaised to `hasho` to save those precious keystrokes).
+
+	$ hasho -h
+	
+	  Usage: hashologist hash1 hash2...
+	
+	  Options:
+	
+	    -h, --help     output usage information
+	    -V, --version  output the version number
+		
+	
+	$ hasho 4229d691b07b13341da53f17ab9f2416 7d793037a0760186574b0282f2f435e7
+	┌────────────────────────────────────────┬──────────────────────────────┐
+	│ Hash                                   │ Possible algorithms          │
+	├────────────────────────────────────────┼──────────────────────────────┤
+	│ 4229d691b07b13341da53f17ab9f2416       │ MD5                          │
+	├────────────────────────────────────────┼──────────────────────────────┤
+	│ 7d793037a0760186574b0282f2f435e7       │ MD5                          │
+	└────────────────────────────────────────┴──────────────────────────────┘
 	
 ##Tests
 
 Tests are written in mocha. Run `npm test` to run all test.
-
+	
 ##TODO 
 
-Add more algorithms
-Create CLI tool
+- Add more algorithms
+- Add different output options for CLI tool
+- Support unix pipes and node streams
+
+
+
