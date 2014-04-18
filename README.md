@@ -21,6 +21,9 @@ Run `npm install -g hashologist`
 The following algorithms are supported so far (more to come):
 
 - MD5
+- SHA1
+- SHA256
+- SHA512
 
 All algorithms are found in the `algos.json` file.
 
