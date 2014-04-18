@@ -22,6 +22,9 @@ Run `npm install -g hashologist`
 The following algorithms are supported so far (more to come):
 
 - MD5
+- SHA1
+- SHA256
+- SHA512
 
 All algorithms are found in the `algos.json` file.
 
@@ -39,13 +42,13 @@ If you install this package with the -g flag, a script will be placed in your pa
 	    -V, --version  output the version number
 		
 	
-	$ hasho 4229d691b07b13341da53f17ab9f2416 7d793037a0760186574b0282f2f435e7
+	$ hasho 4229d691b07b13341da53f17ab9f2416 4a1d4dbc1e193ec3ab2e9213876ceb8f4db72333
 	┌────────────────────────────────────────┬──────────────────────────────┐
 	│ Hash                                   │ Possible algorithms          │
 	├────────────────────────────────────────┼──────────────────────────────┤
 	│ 4229d691b07b13341da53f17ab9f2416       │ MD5                          │
 	├────────────────────────────────────────┼──────────────────────────────┤
-	│ 7d793037a0760186574b0282f2f435e7       │ MD5                          │
+	│ 4a1d4dbc1e193ec3ab2e9213876ceb8f4db72..│ SHA1                         │
 	└────────────────────────────────────────┴──────────────────────────────┘
 	
 ##Tests

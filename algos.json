@@ -3,10 +3,29 @@
     "name": "MD5",
     "predicates": {
       "length": 32,
-      "isNumeric": true,
-      "isAlphabetic": true,
-      "isAlphaNumeric": true  
+      "isAlphaNumeric": true
     },
     "info": "http://en.wikipedia.org/wiki/MD5"
+  },
+  "SHA1": {
+    "name": "SHA1",
+    "predicates": {
+      "length": 40,
+      "isAlphaNumeric": true
+    }
+  },
+  "SHA256": {
+    "name": "SHA256",
+    "predicates": {
+      "length": 64,
+      "isAlphaNumeric": true
+    }
+  },
+  "SHA512": {
+    "name": "SHA512",
+    "predicates": {
+      "length": 128,
+      "isAlphaNumeric": true
+    }
   }
 }
