@@ -1,6 +1,8 @@
 Hashologist (v0.0.1)
 ===========
 
+[![Build Status](https://travis-ci.org/mtharrison/hashologist.svg?branch=master)](https://travis-ci.org/mtharrison/hashologist)
+
 A node.js module that identifies cryptographic hash algorithms from resultant ciphertext.
 
 This is a port of a Python library to Node (https://code.google.com/p/hash-identifier/)
