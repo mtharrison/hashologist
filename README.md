@@ -1,4 +1,4 @@
-Hashologist (v0.0.1)
+Hashologist (v0.0.2)
 ===========
 
 [![Build Status](https://travis-ci.org/mtharrison/hashologist.svg?branch=master)](https://travis-ci.org/mtharrison/hashologist)
@@ -53,7 +53,7 @@ If you install this package with the -g flag, a script will be placed in your pa
 	
 ##Tests
 
-Tests are written in mocha. Run `npm test` to run all test.
+Tests are written in mocha. Run `npm test` to run all tests.
 	
 ##TODO 
 
